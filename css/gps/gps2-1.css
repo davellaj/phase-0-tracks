@@ -1,3 +1,35 @@
-body {
-	background: blue;
+.column-1 {
+  background-color: red;
+  width: 45%;
+  float: left;
+  /* padding: 5px; */
+  /* border: 1px solid black; */
+}
+.column-2 {
+  background-color: blue;
+  float: right;
+  width: 45%;
+}
+
+header {
+  text-align: center;
+  /* background-image: url("http://salam.cpakgulf.org/wp-content/uploads/2015/07/recycled_texture_background_by_sandeep_m-d6aeau9_PZ9chud.jpg"); */
+  color: white;
+}
+
+header h1 {
+  font-size: 3em;  
+}
+
+header p {
+  font-size: 2em;
+  /* background-color: red; */
+}
+
+header, footer {
+  background-color: pink;
+}
+
+footer {
+  clear: both;
 }
