@@ -47,7 +47,9 @@ end
 #decrypt("zed")
 
 #decrypt(encrypt("swordfish"))
-#does not work
+# Ruby evaluates things in paretnthesis first, so it is able to run the encrypt method first and then use 
+#that result to pass into the decrypt method. To get this to work, we had to remove the puts word from the 
+#encrypt method code so that the word was actually stored.
 
 #ask user whether they want to decrypt or encrypt a password using puts and gets.chomp
 #ask for password using puts and store in variable in gets.chomp
