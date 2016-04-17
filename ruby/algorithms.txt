@@ -31,3 +31,30 @@
 -When doors open move forward 3 feet
 
 
+#Common task in my life: Driving to work
+
+-walk out the doors of my house at 9:30 a.m
+-walk to car, get in, and start car
+
+-Until 210 Malapardis Rd is reached
+	-drive forward towards Rt 46 west
+	-Get onto Rt 46 west
+	-drive forward 10 miles
+	-exit onto Rt 80 west
+	-drive forward 10 miles
+	-exit onto rt 287 south
+	-drive forward 3 miles
+	-exit at 43B
+	-drive forward for 1 mile 
+	-turn right onto malapardis rd
+	-turn right at 210 malapardis rd
+-park car
+	-If arrive at 10:00 a.m. or earlier
+		-walk into building
+	-Otherwise
+		-look for managers' car
+		-curse if you see their car
+		-walk into building
+
+#This commute makes me feel like a robot and a self driving car would be perfect for this daily task.
+
