@@ -28,5 +28,11 @@ estimated_age = gets.chomp
 	if estimated_age == ""
 		estimated_age = nil
 	else
-		estimated_age.to_i
+		estimated_age = estimated_age.to_i
 	end
+
+puts "hamster's name: #{name}"
+puts "the volume of squeaky-ness is #{volume}"
+puts "hamster's color: #{color}"
+puts "This hamster is a good candidate for adoption: #{good_candidate}"
+puts "hamster's estimated age is: #{estimated_age}"
