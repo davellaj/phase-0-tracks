@@ -1,0 +1,60 @@
+#-scan wall for elevator button
+#-until you are perpendicular to elevator button and #elevator button wall
+#	-move towards elevator button
+#-when you hit elevator button wall
+#	-if you want to go up, move finger to press top #button to call the elevator
+#	-otherwise to go down, move finger to press the #bottom button to call the elevator
+#-once button is pressed
+#	-wait until doors open
+#Couldn't figure out how to pseudocode finding the elevator doors so I moved on to just working with the robot knowing where the elevator is to begin with.
+
+-Move forward until you hit elevtor doors
+-Once doors open 
+	-move forward until you reach wall A
+	-move left along Wall A until another wall is reached (Wall B)
+	-turn left and move in a straight line along Wall B (perpendicular to) away from Wall A.
+	-Once you hit a new wall (Wall D) 
+	-stop
+-Until floor number is found
+	-Scan buttons for floor number from top to bottom and left to right
+-once floor number is found 
+	-move index finger to touch floor number button
+	-move index finter forward one inch towards floor number button
+	-stop and move hand back to side body
+-once button is pressed
+	-turn left 
+-Until you are half way beteen Wall B and Wall C
+	-move along wall D (perpendicular to) away from Wall B
+-Once halfway between wall B and Wall C 
+	-stop
+	-turn right
+-When doors open move forward 3 feet
+
+
+#Common task in my life: Driving to work
+
+-walk out the doors of my house at 9:30 a.m
+-walk to car, get in, and start car
+
+-Until 210 Malapardis Rd is reached
+	-drive forward towards Rt 46 west
+	-Get onto Rt 46 west
+	-drive forward 10 miles
+	-exit onto Rt 80 west
+	-drive forward 10 miles
+	-exit onto rt 287 south
+	-drive forward 3 miles
+	-exit at 43B
+	-drive forward for 1 mile 
+	-turn right onto malapardis rd
+	-turn right at 210 malapardis rd
+-park car
+	-If arrive at 10:00 a.m. or earlier
+		-walk into building
+	-Otherwise
+		-look for managers' car
+		-curse if you see their car
+		-walk into building
+
+#This commute makes me feel like a robot and a self driving car would be perfect for this daily task.
+
