@@ -49,13 +49,28 @@ while employee <= total_employees
 			end
 	end	
 
-	puts "Input for employee #{employee}:"
-	puts "Name: #{name}" 
-	puts "Age: #{age}"
-	puts "DOB: #{DOB}"
-	puts "Correct age: #{correct_age}"
-	puts "likes_garlic: #{likes_garlic}"
-	puts "wants_insurance: #{wants_insurance}"
+	allergies = ""
+	counter = 1
+	#allergy = ""
+
+	until allergies == "sunlight" || allergies == "done"
+		puts "Employee alergies: please list one at a time"
+		allergies = gets.chomp.downcase
+		if allergies == "sunlight"
+			allergies
+			#allergy_counter = allergies 
+			#break
+			puts "Results: This employee is allergic to sunlight, probably is a vampire" 
+			#allergy += allergies
+		elsif allergies == "done"
+		else
+			allergies
+			# I would like to know how to store each allergy in a variable so that I can print
+			# the employees allergy but I can not figure it out. I was using allergy += allergies
+			# but that was mashing all loop allergy words into one word. 			
+		end
+		counter += 1
+	end
 
 
 	if correct_age && (likes_garlic || wants_insurance)
@@ -83,7 +98,7 @@ while employee <= total_employees
 	end
 
 
-	puts "Results for employee #{employee}:"
+	puts "Other Question Results for employee #{employee}:"
 	if result1 == true && result2 == false && result3 == false && result4 == false
 		puts "Probably not a vampire"
 	elsif result2 == true && result3 == false && result4 == false
@@ -95,5 +110,18 @@ while employee <= total_employees
 	else
 		puts "Results inconclusive"	
 	end
+
+	puts "Input for employee #{employee}:"
+	puts "Name: #{name}" 
+	puts "Age: #{age}"
+	puts "DOB: #{DOB}"
+	puts "Correct age: #{correct_age}"
+	puts "likes_garlic: #{likes_garlic}"
+	puts "wants_insurance: #{wants_insurance}"
+	puts "allergies: #{allergies}"
+
 employee += 1
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
