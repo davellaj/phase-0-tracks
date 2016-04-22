@@ -9,20 +9,27 @@
 
 # "zom".<???>
 # => “zoom”
+"zom".insert(1, "o")
 # "zom".chop.ljust(4, "om")
 
 # "enhance".<???>
 # => "    enhance    "
-
+#enhance".ljust(12).rjust(17)
 
 "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
 # "the usual".<???>
 #=> "the usual suspects"
+# phrase = "the usual"
+# phrase << " suspects"
+"the usual" << " suspects"
+# "the usual" + " suspects"
+# "the usual".replace "the usual suspects"
 
 # " suspects".<???>
 # => "the usual suspects"
+" suspects".prepend("the ususal")
 
 "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
