@@ -12,3 +12,32 @@ def say_hello
 end
 
 say_hello {|name1, name2| puts "hello #{name1} and #{name2}"}
+
+
+puts "before:"
+
+our_age =[30, 28]
+
+our_age.each {|element| puts "#{element}"}
+p our_age
+
+puts "after:"
+our_age.map!{|element|
+  puts element
+  element+=1
+  }
+p our_age
+
+puts "before":
+  
+restaurant={
+  :hummus => 4,
+  :ice_cream => 2,
+  :soda => 1
+  }
+
+puts "After:"
+restaurant.map{|item, price| puts"The prices have gone up. Each item #{item} has risen #{price+1}."}
+
+restaurant.map{|food, price| restaurant[food]+=1}
+p restaurant
