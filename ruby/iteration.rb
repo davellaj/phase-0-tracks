@@ -41,3 +41,12 @@ restaurant.map{|item, price| puts"The prices have gone up. Each item #{item} has
 
 restaurant.map{|food, price| restaurant[food]+=1}
 p restaurant
+
+#Release 2
+p restaurant.select{|food,price| price <=2} 
+p restaurant.any?{|food,price|food.length<=4}
+p restaurant.delete_if{|food,price|price >=5}
+
+p our_age.select{|age| age >= 28}
+p our_age.any?{|age| age < 20}
+p our_age.delete_if{|age| age < 30}
