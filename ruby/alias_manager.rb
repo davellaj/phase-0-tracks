@@ -30,16 +30,23 @@ def name_swap(employee)
 	# p name
 	name.reverse!
 	# p name
-	spy = name.join(' ')
-	# p spy
+	name.join(' ')
+	# puts new_name
 end
-
 spy = name_swap('Felicia Torres')
-# p spy
+p spy
+
 
 #Method scramble name: 
 # if you can index each letter in the vowel string
 # then you can move the index + 1 to get the next vowel.
 
+scramble = spy.split('')
+scramble.map! do |letter|
+	#puts letter
+	letter.next
+end
+scramble.join
 
-
+# puts "After .map call"
+# p spy 
