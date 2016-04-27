@@ -43,10 +43,17 @@ p spy
 
 scramble = spy.split('')
 scramble.map! do |letter|
-	#puts letter
+	vowel = 'aeiou'
+	if vowel.include?(letter)
+		# p vowel
+		# p letter
+		 index = vowel.index(letter)+1
+		# p index
+		 vowel[index]
+	else
+	#p letter
 	letter.next
+	end
 end
 scramble.join
 
-# puts "After .map call"
-# p spy 
