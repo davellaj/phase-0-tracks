@@ -26,7 +26,11 @@
 # just went with a different approach, but it would be good to circle back and know why the last name didn't capitalize
 # Also had trouble with edge value sollution at the end of 'aeiou' and consonant alphabet
 # need to find a way to keep space a space and not '!' 
+#loop through to let users repeatedly enter names to get a fake name back
+# store all the names and then print real and spy names at the end of the program
 
+
+#loop through to let users repeatedly enter names to get a fake name back
 employee = ""
 while employee != "quit"
 puts "What is the employee's name?, to exit type 'quit'"
@@ -44,8 +48,10 @@ employee = gets.chomp
 	if employee == "quit"
 		break
 	end
-	# swap first and last name
+
+# swap first and last name
 	#employee = "Felicia Torres"
+	# method that swaps names
 	def name_swap(employee)
 		# p employee
 		name = employee.split(' ')
@@ -56,18 +62,20 @@ employee = gets.chomp
 		# puts new_name
 	end
 
+	#assign new spy name variable using swap name method return
 	spy = name_swap(employee)
 	# p spy
 
 
-	#Method scramble name: 
+#Method scramble name: 
 	# if you can index each letter in the vowel string
 	# then you can move the index + 1 to get the next vowel.
+	# same approach for conosonants
 
 	scramble = spy.split('')
 	scramble.map! do |letter|
-		vowel = 'aeiouAEIOU'
-		consonant = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
+		vowel = 'aeiouaAEIOU'
+		consonant = 'bcdfghjklmnpqrstvwxyzbBCDFGHJKLMNPQRSTVWXYZ'
 		if vowel.include?(letter)
 			# p vowel
 			# p letter
@@ -84,6 +92,14 @@ employee = gets.chomp
 		end
 	end
 	spy = scramble.join
-	p spy
+	# p spy
+	
+roster = {}
+ roster[employee] = spy
+
 
 end
+
+p roster
+
+# store all the names and then print real and spy names at the end of the program
