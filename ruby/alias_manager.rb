@@ -21,52 +21,69 @@
 
 # end result should be 'Vussit Gimodoe'
 # will you have to use the method to downcase the name at the beginning and then capitalize
-# the name again at the end? Will your .next methods work on capital letters? It worked fine
-# need to find a way to keep space a space and not '!' NEED TO GO BACK AND FIX
+# the name again at the end? Will your .next methods work on capital letters? I first downcased the name
+# and then at the end capitalized the name, but it did not capitalize the first letter in my last name so I 
+# just went with a different approach, but it would be good to circle back and know why the last name didn't capitalize
+# Also had trouble with edge value sollution at the end of 'aeiou' and consonant alphabet
+# need to find a way to keep space a space and not '!' 
 
-# swap first and last name
-# puts "What is the employee's name?"
-# employee = gets.chomp
-employee = "Felicia Torres"
-
-# swap first and last name
-def name_swap(employee)
-	# p employee
-	name = employee.split(' ')
-	# p name
-	name.reverse!
-	# p name
-	name.join(' ')
-	# puts new_name
-end
-
-spy = name_swap(employee)
-# p spy
-
-
-#Method scramble name: 
-# if you can index each letter in the vowel string
-# then you can move the index + 1 to get the next vowel.
-
-scramble = spy.split('')
-scramble.map! do |letter|
-	vowel = 'aeiouAEIOU'
-	consonant = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
-	if vowel.include?(letter)
-		# p vowel
-		# p letter
-		 index = vowel.index(letter)+1
-		# p index
-		 vowel[index]
-	elsif consonant.include?(letter)
-		index = consonant.index(letter)+1
-		consonant[index]
-	else letter == ""
-		letter
-	#p letter
-	# letter.next
+employee = ""
+while employee != "quit"
+puts "What is the employee's name?, to exit type 'quit'"
+employee = gets.chomp
+	until valid_input = true
+		if employee == ""
+			puts "What is the employee's name?, to exit type 'quit'"
+			employee = gets.chomp
+			valid_input = false
+		else
+			valid_input = true
+		end
+	end	
+	
+	if employee == "quit"
+		break
 	end
-end
-spy = scramble.join
-p spy
+	# swap first and last name
+	#employee = "Felicia Torres"
+	def name_swap(employee)
+		# p employee
+		name = employee.split(' ')
+		# p name
+		name.reverse!
+		# p name
+		name.join(' ')
+		# puts new_name
+	end
 
+	spy = name_swap(employee)
+	# p spy
+
+
+	#Method scramble name: 
+	# if you can index each letter in the vowel string
+	# then you can move the index + 1 to get the next vowel.
+
+	scramble = spy.split('')
+	scramble.map! do |letter|
+		vowel = 'aeiouAEIOU'
+		consonant = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
+		if vowel.include?(letter)
+			# p vowel
+			# p letter
+			 index = vowel.index(letter)+1
+			# p index
+			 vowel[index]
+		elsif consonant.include?(letter)
+			index = consonant.index(letter)+1
+			consonant[index]
+		else letter == ""
+			letter
+		#p letter
+		# letter.next
+		end
+	end
+	spy = scramble.join
+	p spy
+
+end
