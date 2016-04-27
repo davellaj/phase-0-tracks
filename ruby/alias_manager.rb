@@ -21,7 +21,13 @@
 
 # end result should be 'Vussit Gimodoe'
 # will you have to use the method to downcase the name at the beginning and then capitalize
-# the name again at the end? Will your .next methods work on capital letters?
+# the name again at the end? Will your .next methods work on capital letters? It worked fine
+# need to find a way to keep space a space and not '!' NEED TO GO BACK AND FIX
+
+# swap first and last name
+# puts "What is the employee's name?"
+# employee = gets.chomp
+employee = "Felicia Torres"
 
 # swap first and last name
 def name_swap(employee)
@@ -33,8 +39,9 @@ def name_swap(employee)
 	name.join(' ')
 	# puts new_name
 end
-spy = name_swap('Felicia Torres')
-p spy
+
+spy = name_swap(employee)
+# p spy
 
 
 #Method scramble name: 
@@ -43,17 +50,23 @@ p spy
 
 scramble = spy.split('')
 scramble.map! do |letter|
-	vowel = 'aeiou'
+	vowel = 'aeiouAEIOU'
+	consonant = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
 	if vowel.include?(letter)
 		# p vowel
 		# p letter
 		 index = vowel.index(letter)+1
 		# p index
 		 vowel[index]
-	else
+	elsif consonant.include?(letter)
+		index = consonant.index(letter)+1
+		consonant[index]
+	else letter == ""
+		letter
 	#p letter
-	letter.next
+	# letter.next
 	end
 end
-scramble.join
+spy = scramble.join
+p spy
 
