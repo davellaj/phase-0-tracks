@@ -7,15 +7,15 @@
 def create_list(items)
   grocery_list = {}
   #items = "cereal carrots apples"
-  something = items.split(' ')
-  something.each do |item|
+  arr_list = items.split(' ')
+  arr_list.each do |item|
     grocery_list[item] = 1
   end
   p grocery_list
 end
 
 grocery_list = create_list("carrots pickles olives")
-p grocery_list
+grocery_list.default = 1
 # grocery_list.class
 
   # initialize hash with variable name grocery list with value as quantity
@@ -28,12 +28,12 @@ p grocery_list
 # steps: use variable name and key as well as assign a value using 
 # output: your hash with new item added
 
-def grocery_list(item, quantity)
+def grocery_list({|item, quantity|})
   grocery_list[item] = quantity
   p grocery_list
 end
 
-p add_item("spinach", 2)
+p grocery_list("spinach", 2)
 
 # Method to remove an item from the list
 # input: 
