@@ -49,7 +49,7 @@ employee = gets.chomp
 		break
 	end
 
-# swap first and last name
+	# swap first and last name
 	#employee = "Felicia Torres"
 	# method that swaps names
 	def name_swap(employee)
@@ -58,40 +58,40 @@ employee = gets.chomp
 		new_name = name.join(' ')
 	end
 
-#assign new spy name variable using swap name method return
-spy = name_swap(employee)
+	#assign new spy name variable using swap name method return
+	spy = name_swap(employee)
 
-#Method scramble name: 
+	#Method scramble name: 
 	# if you can index each letter in the vowel string
 	# then you can move the index + 1 to get the next vowel.
 	# same approach for conosonants
 
-scramble = spy.split('')
-	scramble.map! do |letter|
-		vowel = 'aeiouaAEIOU'
-		consonant = 'bcdfghjklmnpqrstvwxyzbBCDFGHJKLMNPQRSTVWXYZ'
-		if vowel.include?(letter)
-			 index = vowel.index(letter)+1
-			 vowel[index]
-		elsif consonant.include?(letter)
-			index = consonant.index(letter)+1
-			consonant[index]
-		else letter == ""
-			letter
+	scramble = spy.split('')
+		scramble.map! do |letter|
+			vowel = 'aeiouaAEIOU'
+			consonant = 'bcdfghjklmnpqrstvwxyzbBCDFGHJKLMNPQRSTVWXYZ'
+			if vowel.include?(letter)
+				 index = vowel.index(letter)+1
+				 vowel[index]
+			elsif consonant.include?(letter)
+				index = consonant.index(letter)+1
+				consonant[index]
+			else letter == ""
+				letter
+			end
 		end
-	end
-spy = scramble.join
+	spy = scramble.join
 
-#method to store fake names as they are entered. 
-# take employee name and new spy name that is from every loop and store them in a hash. 
-#(I COULD NOT FIGURE OUT HOW TO STORE THE HASH KEY VALUE PAIRS FROM THE LOOPS!)
+	#method to store fake names as they are entered. 
+	# take employee name and new spy name that is from every loop and store them in a hash. 
+	#(I COULD NOT FIGURE OUT HOW TO STORE THE HASH KEY VALUE PAIRS FROM THE LOOPS!)
 	def add_list(employee, spy)
 	roster = {}
 	roster[employee] = spy
 	roster
 	end
 	
-roster = add_list(employee, spy)
+	roster = add_list(employee, spy)
 end
 
 #iterate through data structure and print real and spy names at the end of the program
