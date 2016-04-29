@@ -53,53 +53,46 @@ employee = gets.chomp
 	#employee = "Felicia Torres"
 	# method that swaps names
 	def name_swap(employee)
-		# p employee
 		name = employee.split(' ')
-		# p name
 		name.reverse!
-		# p name
-		name.join(' ')
-		# puts new_name
+		new_name = name.join(' ')
 	end
 
-	#assign new spy name variable using swap name method return
-	spy = name_swap(employee)
-	# p spy
-
+#assign new spy name variable using swap name method return
+spy = name_swap(employee)
 
 #Method scramble name: 
 	# if you can index each letter in the vowel string
 	# then you can move the index + 1 to get the next vowel.
 	# same approach for conosonants
 
-	scramble = spy.split('')
+scramble = spy.split('')
 	scramble.map! do |letter|
 		vowel = 'aeiouaAEIOU'
 		consonant = 'bcdfghjklmnpqrstvwxyzbBCDFGHJKLMNPQRSTVWXYZ'
 		if vowel.include?(letter)
-			# p vowel
-			# p letter
 			 index = vowel.index(letter)+1
-			# p index
 			 vowel[index]
 		elsif consonant.include?(letter)
 			index = consonant.index(letter)+1
 			consonant[index]
 		else letter == ""
 			letter
-		#p letter
-		# letter.next
 		end
 	end
-	spy = scramble.join
-	# p spy
+spy = scramble.join
+
+#method to store fake names as they are entered. 
+# take employee name and new spy name that is from every loop and store them in a hash. 
+#(I COULD NOT FIGURE OUT HOW TO STORE THE HASH KEY VALUE PAIRS FROM THE LOOPS!)
+	def add_list(employee, spy)
+	roster = {}
+	roster[employee] = spy
+	roster
+	end
 	
-roster = {}
- roster[employee] = spy
-
-
+roster = add_list(employee, spy)
 end
 
-p roster
-
-# store all the names and then print real and spy names at the end of the program
+#iterate through data structure and print real and spy names at the end of the program
+roster.each {|employee, spy| puts "#{spy} is acutally #{employee}"}
