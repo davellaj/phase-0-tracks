@@ -2,7 +2,7 @@
 # Puppy class will have instances of different types of dogs
 # One instance can be a golden retriever Puppy. 
 
-# spiecies ------------------------------
+# SPECIES ------------------------------
 # Puppy
 
 # CHARACTERISTICS ----------------------
