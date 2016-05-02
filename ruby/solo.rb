@@ -1,4 +1,4 @@
-# Create a class for Broadway Performer
+# Create a class for Broadway star
 # set attr_reader 
 # set attr_accessor 
 
@@ -16,4 +16,18 @@
 #Add 3 Methods 
 	# Sing loudly(that takes an argument of words and capitalize them)
 	# Gain experience - adds 1 to experienceand reassigns value or experience
-	# Change preferences of Broadway shows
+	# Change preference, Add fav Broadway show
+	# change preference, Delete fav broadway show
+
+Class Broadway_star
+attr_reader = :experience, :age
+attr_accessor = :voice_type, :name, :fav_shows
+
+	def initialize(name, age, voice_type)
+		@name = name
+		@age = age
+		@voice_type = voice_type
+		@experience = 0
+		@fav_shows = ["Beautiful", "Les Miserables", "Book of Mormon", "Mama Mia"]
+	end
+end
