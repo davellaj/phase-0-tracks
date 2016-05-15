@@ -23,4 +23,4 @@ function reverse(str){
 	return wordReverse;
 }
 
-reverse("hello");
+console.log(reverse("hello"));
