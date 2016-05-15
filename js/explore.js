@@ -23,4 +23,11 @@ function reverse(str){
 	return wordReverse;
 }
 
-console.log(reverse("hello"));
+// console.log(reverse("hello"));
+
+// add driver code to call the reverse function and store result in variable
+var confused = reverse("What");
+// console.log(confused);
+
+// add driver code to print the previous variable if some condition is true.
+if (1 === 1) {console.log(confused)};
